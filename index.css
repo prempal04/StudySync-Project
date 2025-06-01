@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
 :root{
    --primary-color:#6366F1;
     --accent-color:#3f83f8;
@@ -9,7 +10,6 @@
     --light-gray: #f0f0f0;
     --gray: #808080;
     --dark-gray: #555;
-
 }
 
 *{
@@ -26,8 +26,12 @@ body{
     padding: 0.1rem;
 }
 
+
+/* nav-bar */
+
+
 .header{
-    padding: 0rem 1rem;
+    padding: 1rem 1rem;
 }
 
 .header-content{
@@ -63,7 +67,6 @@ body{
     }
     
 }
-
 
 .nav-link{
     color: var(--gray);
@@ -115,6 +118,213 @@ body{
 @media screen and (max-width:768px) {
     .menu-button{
         display: block;
+    }   
+}
+
+
+/* hero-section */
+
+.hero-section{
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0.6rem;
+}
+
+.content-left{
+    animation: slidefromleft 1s ease forwards;
+    text-align: center;
+}
+
+@keyframes slidefromleft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1 ;
+        transform: translateX(0);
+    }
+}
+
+.section-label{
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.section-title{
+    font-size: 2.3rem;
+    font-weight: bolder;
+    color: var(--text-color);
+    padding: 1rem;
+}
+
+.section-description{
+    font-size: 1.13rem;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+.button-group{
+    padding: 1rem;
+    margin: 1rem 0rem 0rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.start-button{
+    font: 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transform: all 0.1s;
+}
+
+.start-button:hover{
+    background-color: #5254f8;
+
+}
+.tour-button{
+    font: 1rem;
+    background-color: var(--dark-gray);
+    color: var(--background-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+}
+
+.tour-button:hover{
+    background-color: #808080;    
+}
+
+.content-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container{
+    border-radius: 1.3rem;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1) ;
+    height: 21.83rem;
+
+}
+.hero-image{
+    height: 100%;
+    width: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+    .hero-section{
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .content-left{
+        max-width: 50%;
+        text-align: left;
+    }
+
+    .section-title{
+        padding-left: 0;
+        font-size: 3.8rem;
+    }
+    .section-description{
+        font-size: 1.1rem;
+
+        width: 30.56rem;
+        height: 6.56rem;
+    }
+    .button-group{
+        justify-content: start;
+        padding-left: 0;
+        margin: 0;
+    }
+    .image-container{
+        height: 29.96rem;
+    }
+}
+
+/* company-section  */
+
+.company-section{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: slidefromleft 1s ease forwards;
+}
+
+.company-title{
+    font-size: 2.3rem;
+}
+
+.companies{
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.8rem 2.5rem;
+    margin: 2rem 0rem;
+    background-color: var(--light-gray);
+    border-radius: 0.8rem;
+    
+}
+
+.company-logo{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gray);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.svg{
+    height: 1.36rem;
+}
+
+@media screen and (min-width: 640px) {
+    .companies{
+        grid-template-rows: repeat(1,1fr);
+        grid-template-columns: repeat(4,1fr);
     }
     
 }
+
+/* feature section  */
+
+.feature-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.feature-title{
+
+}
+
+.feature-description{
+
+}
+
+.feature-cards{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+
+}
+
+
